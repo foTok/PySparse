@@ -18,11 +18,10 @@ ext_module = Extension("PySparse",
                     extra_compile_args=["/openmp"],
                     extra_link_args=["/openmp"],
                     libraries=['CSparse'],
-                    library_dirs=['./CSparse/lib/Release/32']
+                    library_dirs=['./CSparse/lib/Release/64']
             )
    
 setup(
     cmdclass = {'build_ext': build_ext},
-        ext_modules = [ext_module], 
+    ext_modules = [ext_module]
 )
-
